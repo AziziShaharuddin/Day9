@@ -1,0 +1,139 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --main-header-font: 9px;
+    --main-subheader-font: 13px;
+    --desc-font: 12px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: rgba(233, 230, 230, 0.781);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(179, 157, 38, 0.932);  
+    border-radius: 10px;
+    }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(114, 98, 7, 0.842);  
+}
+
+#container {
+    width: 360px;
+    height: 720px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    font-family: 'Lato';
+}
+header {
+    width: 100%;
+    border-bottom: 1px solid rgba(124, 120, 120, 0.973);
+    padding: 10px;
+}
+.main-page {
+    width: 100%;
+    height: 230px;
+    background-color: violet;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: url(./images/chicago.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-page > * {
+    width: calc(100%/2);
+    height: 68px;
+}
+.main-desc {
+    /* width: 100%;
+    height: 68px; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
+    font-size: var(--main-header-font);
+    /* display: none; */
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+.main-desc > h3 {
+    font-size: var(--main-subheader-font);
+    font-weight: bold;
+}
+.main-desc > p {
+    font-size: var(--main-subheader-font);
+}
+.main-btn {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main-btn > * {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    line-height: 30px;
+    text-align: center;
+    font-size: var(--desc-font);
+    margin: 0 2px;
+}
+.main-btn > *:hover {
+    transform: scale(1.05);
+}
+.box-playlist {
+    width: 320px;
+    height: 288px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 10px auto;
+}
+.box-playlist > * {
+    background-color: rgba(124, 120, 120, 0.4);
+    border-radius: 10px;
+    width: 310px;
+    height: 70px;
+    /* margin: 2px 0; */
+}
+.playlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 2px auto;
+}
+.playlist > * {
+    font-size: var(--main-subheader-font);
+    font-family: 'Work Sans';
+}
+.playlist:hover {
+    transform: scale(1.1);
+    transition: all 0.8s;
+    border: 0.5px solid rgba(124, 120, 120, 0.973);
+}
+.playlist img {
+    width: 80px;
+    height: 70px;
+    border-radius: 10px 0 0 10px;
+}
+.playlist-desc {
+    padding: 0 15px;
+}
+.playlist > p {
+    display: inline-block;
+}
+.description {
+    width: 100%;
+    /* height: 90px; */
+    /* padding: 10px 0;
+    box-sizing: border-box; */
+    background-image: linear-gradient(rgb(109, 105, 105), rgb(0, 0, 0));
+    padding: 15px 15px;
+}

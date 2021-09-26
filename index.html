@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <style></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h3>Hello.</h3>
+        </header>
+        <div id="mainCover" class="main-page">
+            <audio src="./audio/30sec.mp3" id="song"></audio>
+            <div class="main-desc">
+                <h1 id="songTitle">Hidup Seribu Tahun</h1>
+                <h3 id="songArtist">Hamdan Madani</h3>
+                <p id="songAlbum">Main hentam saje</p>
+            </div>
+            <div class="main-btn">
+                <!-- <div class="mute" onclick="muteButton()"><i class="fa fa-volume-mute"></i></div> -->
+                <div id="volDown" class="volume-button" onclick="volumeButton(-0.1)"><i class="fa fa-volume-down"></i></div>
+                <div id="prevSong" class="next-video" onclick="switchButton(-1)">
+                    <i class="fa fa-backward"></i>
+                </div>
+                <div id="song-button" class="video-button" onclick="playButton()"><i class="fa fa-play"></i></div>
+                <div id="nextSong" class="next-video" onclick="switchButton(1)"><i class="fa fa-forward"></i></div>
+                <div id="volUp" class="volume-button" onclick="volumeButton(0.1)"><i class="fa fa-volume-up"></i></div>
+            </div>
+        </div>
+        <div class="content-page">
+            <div class="box-playlist">
+                <div class="playlist" onclick="subSong('songList1')">
+                    <img src="./images/chicago.jpg" alt="">
+                    <audio src="./audio/30sec.mp3"></audio>
+                    <div class="playlist-desc">
+                        <h3 id="songTitle">Hidup Seribu Tahun</h3>
+                        <p id="songArtist">Hamdan Madani</p> <p id="songAlbum">Main hentam saje</p>
+                        
+                    </div>
+                </div>
+                <div class="playlist" onclick="subSong('songList2')">
+                    <img src="./images/newyork.jpg" alt="">
+                    <audio src="./audio/bgmusic.mp3"></audio>
+                    <div class="playlist-desc">
+                        <h3 id="songTitle">Bad Day</h3>
+                        <p id="songArtist">Drake</p>
+                        <p id="songAlbum">Hanya Aku Yang Tahu</p>
+                    </div>
+                </div>
+                <div class="playlist" onclick="subSong('songList3')">
+                    <img src="./images/ny.jpg" alt="">
+                    <audio src="./audio/bloop.mp3"></audio>
+                    <div class="playlist-desc">
+                        <h3 id="songTitle">Lets gooo</h3>
+                        <p id="songArtist">Azizi</p>
+                        <p id="songAlbum">On Tour</p>
+                    </div>
+                </div>
+                <div class="playlist" onclick="subSong('songList4')">
+                    <img src="./images/sanfran.jpg" alt="">
+                    <audio src="./audio/click.mp3"></audio>
+                    <div class="playlist-desc">
+                        <h3 id="songTitle">Kau Ilhamku</h3>
+                        <p id="songArtist">Marza</p>
+                        <p id="songAlbum">The love of My Life</p>
+                    </div>
+                </div>
+                <div class="playlist" onclick="subSong('songList5')">
+                    <img src="./images/la.jpg" alt="">
+                    <audio src="./audio/littlebit.mp3"></audio>
+                    <div class="playlist-desc">
+                        <h3 id="songTitle">What on Earth</h3>
+                        <p id="songArtist">Lil Wayne</p>
+                        <p id="songAlbum">The love of My Life</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="description">
+                <p id="Desc1">Lagu ini mengisahkan cubaan seorang remaja ingin bertukar bidang ke arah</p>
+                <!-- <p id="Desc2"></p> -->
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
